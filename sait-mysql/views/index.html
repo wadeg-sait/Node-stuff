@@ -1,86 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Wade Grimm">
-    <meta name="course" content="CPRG210">
-    <meta name="date" content="November 23, 2019">
-
-    <title>Travel Experts</title>
-    <!-- Include CSS from remote location and file -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="wg-functions.js"></script>
-</head>
-
-<body>
-    <div class="container-fluid jumbotron sticky-top jumbo-bg fill ">
-        <!-- Main div-->
-        <!-- Add Navigation bar -->
-        <nav class="navbar navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="/index.html">Travel Experts</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto ">
-                    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
-                    <li class="nav-item"> <a class="nav-link" href="contact.html">Contact Us</a>
-                    <li class="nav-item"> <a class="nav-link" href="about.html">About</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Main Section -->
-        <div class="section col-md-6">
-            <!-- Section div -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin placerat eleifend convallis. Duis ut
-                feugiat velit. Sed sodales, dolor sit amet venenatis blandit,
-                tortor risus egestas justo, at ultrices urna justo vel magna. Nullam consectetur, nulla ut tristique
-                fermentum, tortor ligula imperdiet massa, quis auctor velit
-                est sed nisi. Curabitur congue tellus eget ligula dignissim, vel congue neque maximus. Phasellus sed
-                enim in purus vehicula pulvinar. Ut nec interdum augue. Etiam
-                ornare turpis ac vulputate fermentum. Cras semper ac nisl ut tincidunt. Aenean nec finibus elit.
-                Vestibulum libero diam, tincidunt ut velit in, gravida lobortis
-                quam. Curabitur et libero ante. Aenean consectetur vehicula molestie.
-            </p>
-            <p>Maecenas bibendum, nunc quis tincidunt elementum, est elit feugiat ligula, eu feugiat mi eros at est.
-                Maecenas id lacus id purus placerat condimentum a eget risus.
-                Aenean vitae pharetra metus, suscipit vestibulum nibh. In eu maximus neque, ut placerat nulla. Nullam
-                dignissim non nunc ac faucibus. Nulla vitae orci sem.
-                Aliquam sit amet euismod elit.
-            </p>
-        </div> <!-- Section div -->
-        <div class="section col-md-6">
-            <p>Duis volutpat diam lobortis augue interdum vestibulum. Quisque sit amet viverra justo. Sed pulvinar,
-                metus at tincidunt ornare, eros nisl hendrerit leo, ut venenatis velit ex quis nibh. Nulla finibus neque
-                eu ex rhoncus bibendum. Donec id consequat est. Vivamus dui metus, viverra et ante a, hendrerit
-                porttitor massa. In hac habitasse platea dictumst. Nulla ac faucibus libero. Quisque at hendrerit
-                sapien. Sed ornare eros sed augue consectetur imperdiet. Phasellus mattis felis id ipsum tempor semper
-                sit amet ut odio. Donec elementum cursus nulla, sit amet mollis libero tincidunt sed. Aenean hendrerit
-                egestas ante, sit amet posuere massa elementum sed. Morbi vitae turpis ut ipsum suscipit fringilla at ut
-                libero. Ut tristique molestie nunc vitae feugiat. Pellentesque accumsan odio eu gravida sollicitudin.
-            </p>
-
-        </div>
-    </div><!-- Main div-->
-
-    <!-- Include JavaScripts for Navbar animation and functionality -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-</body>
-
+<html>
+	<head>
+		<title>demo</title>
+	</head>
+	<body>
+		<form method="post" action="/post_form">
+			First Name:<input type="text" name="fname" /><br />
+			Last Name:<input type="text" name="lname" /><br />
+			Address:<input type="text" name="address" /><br />
+			City:<input type="text" name="city" /><br />
+			Prov:<input type="text" name="prov" /><br />
+			Postal:<input type="text" name="postal" /><br />
+			Country:<input type="text" name="country" /><br />
+			Home Phone:<input type="text" name="hphone" /><br />
+			Bus Phone:<input type="text" name="bphone" /><br />
+			Email:<input type="text" name="email" /><br />
+			Agent:<input type="text" name="agent" /><br />
+			<input type="submit" />
+		</form>
+	</body>
 </html>

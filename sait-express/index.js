@@ -3,7 +3,7 @@ const app=express();
 const moment = require('moment');
 const greeting = require("./randomgreet");
 var currentTime = new moment().format("LTS");
-var currentDate = new moment().format('MMMM Do, YYYY')
+var currentDate = new moment().format('MMMM Do, YYYY');
 const PORT = 8000;
 var bodyParser = require("body-parser");
 

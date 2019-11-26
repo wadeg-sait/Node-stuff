@@ -16,7 +16,7 @@ conn.connect((err) => {
     // log that we connected
     console.log("Connection established");
     // Get some results from the customers table
-    conn.query("SELECT * FROM customers WHERE customerid=105", (err, result, fields) => {
+    conn.query("SELECT * FROM customers WHERE customerid=122", (err, result, fields) => {
         // throw an error if we can't perform the operation
         if (err) throw err;
         //Show the returned info

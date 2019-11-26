@@ -1,0 +1,36 @@
+/* My first CSS file
+    <meta name="author" content="Wade Grimm">
+    <meta name="course" content="CPRG210">
+    <meta name="date" content="November 23, 2019">
+
+*/
+header{
+    position: absolute;
+    width: 400px;
+    height: 5%;
+    top: 20px;
+    left: 10px;
+}
+nav{
+    position: fixed;
+    top: 0px;
+}
+main{
+    position: fixed;
+    top: 100px;
+
+}
+footer{
+    position: absolute;
+    bottom: 20px;
+
+}
+aside{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+form{
+    position: absolute;
+    top: 200px;
+}

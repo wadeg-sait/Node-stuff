@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Wade Grimm">
+    <meta name="course" content="CPRG210">
+    <meta name="date" content="November 23, 2019">
+
+    <title>Travel Experts</title>
+    <!--<link rel="stylesheet" href="styles.css"/> -->
+    <style type="text/css">
+        h1 {
+            background-color: coral;
+        }
+
+        body {
+            background-image: url("imgs/bckgrnd1.jpg");
+        }
+        /* used for animating the airplane */
+        #animate {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        /* Used to 'Flip' the airplane    */
+        .mirror {
+            -moz-transform: scale(-1, 1);
+            -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="functions.js"></script>
+    <script>
+        // arrays for images, descriptions and URLs
+        var images = new Array();
+        var Descs = new Array();
+        var URLs = new Array();
+        images[0] = new Image();
+        images[0].Image = "imgs/tulum-sm.png";
+        images[1] = new Image();
+        images[1].Image = "imgs/chichenitza-sm.png";
+        images[2] = new Image();
+        images[2].Image = "imgs/comalcalco-sm.png";
+        images[3] = new Image();
+        images[3].Image = "imgs/palenque-sm.png";
+        Descs[0] = "Tulum - Mexico";
+        Descs[1] = "Chichen Itza - Mexico";
+        Descs[2] = "Comalcalco - Mexico";
+        Descs[3] = "Palenque - Mexico";
+        URLs[0] = "https://en.wikipedia.org/wiki/Tulum";
+        URLs[1] = "https://en.wikipedia.org/wiki/Chichen_Itza";
+        URLs[2] = "https://en.wikipedia.org/wiki/Comalcalco";
+        URLs[3] = "https://en.wikipedia.org/wiki/Palenque";
+        
+
+    </script>
+
+
+</head>
+
+<body>
+    <header>
+        <img src="imgs/alcatraz.png" alt="Alcatraz" />
+        <h1>Welcome to Travel Experts</h1>
+        <br />
+    </header>
+    <nav>
+        <a href="contact.html">Contact Us</a>&nbsp;|
+        <a href="register.html">Register</a>&nbsp;|
+        <a href="http://expedia.ca">Expedia</a>&nbsp;|
+        <a href="http://travelocity.com">Travelocity</a>&nbsp;|
+        <a href="http://hotels.com">Hotels.com</a>
+        <br /><br /><br />
+    </nav>
+    <main>
+        <script>
+            // do this when the document is ready (page loaded)
+            $(document).ready(function (e) {
+                // get the image width, had to add 10 to get the scroll bars to disappear
+                var imgWidth = ($("#img1").width() + 10);
+                // set the travel width; document width minus the image width
+                var width = ($(document).width() - imgWidth);
+                //console.log(imgWidth);
+                //console.log(width);
+
+                function goRight() {
+                    // remove the 'flip' effect
+                    $("#img1").removeClass('mirror');
+                    $("#animate").animate({
+                        left: width
+                    }, 5000, function () {
+                        setTimeout(goLeft, 50);
+                    });
+                }
+                function goLeft() {
+                    $("#img1").addClass('mirror');
+                    $("#animate").animate({
+                        left: 0
+                    }, 5000, function () {
+                        setTimeout(goRight, 50);
+                    });
+                }
+                setTimeout(goRight, 50);
+            });
+        </script>
+        <!-- Container for the airplane -->
+        <div id="animate"><img id="img1" src="imgs/airplane-sm.png"></div><br/><br/>
+    </main>
+    <aside>
+    </aside>
+    <section>
+        Pop ups will close in 10 seconds
+        <!-- Container for the generated table -->
+        <table id="imgsTable"> <!-- Set a name so we can reference it -->
+            <script>
+                for (i = 0; i < images.length; i++) {
+                    var table = document.getElementById("imgsTable");
+                    var row = table.insertRow(i);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    //console.log("<img src='" + images[i].Image + "' onclick=openWindow('" + URLs[i] + "');>");
+                    cell1.innerHTML = "<img src='" + images[i].Image + "' onclick=openWindow('" + URLs[i] + "');>";
+                    cell2.innerHTML = Descs[i];
+                };
+            </script>
+        </table>
+
+    </section>
+    <footer>
+        Copyright &copy; 2019 Travel Experts
+    </footer>
+</body>
+
+</html>

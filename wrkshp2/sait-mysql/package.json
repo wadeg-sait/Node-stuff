@@ -1,0 +1,22 @@
+{
+  "name": "sait-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Wade Grimm",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "jslint": "^0.12.1",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1"
+  }
+}
